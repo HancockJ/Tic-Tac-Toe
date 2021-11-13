@@ -92,7 +92,7 @@ class Game extends React.Component {
             "Go to move #" + move :
             "Go to game start";
         return (
-            <li key={{move}}>
+            <li key={move}>
                 <button onClick={() => this.jumpTo(move)}>{desc}</button>
             </li>
         );
@@ -123,6 +123,18 @@ class Game extends React.Component {
   }
 
 }
+
+const index = {
+    0: "[1,1]",
+    1: "[1,2]",
+    2: "[1,3]",
+    3: "[2,1]",
+    4: "[2,2]",
+    5: "[2,3]",
+    6: "[3,1]",
+    7: "[3,2]",
+    8: "[3,3]",
+};
 
 function calculateWinner(squares) {
     const lines = [
